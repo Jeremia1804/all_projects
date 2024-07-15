@@ -1,0 +1,46 @@
+h1{
+    margin: 25px 310px;
+    font-size: 2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #0b4139;
+}
+table {
+    border-collapse: collapse;
+    margin: 25px 200px;
+    font-size: 1em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-width: 400px;
+}
+th {
+    background-color: #0b4139;
+    color: #FFF;
+    text-align: left;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+td {
+    padding: 12px;
+    border: 1px solid rgb(221, 221, 221);
+}
+tr:nth-child(even) {
+    background-color: #d7eee4;
+}
+table tr:hover td {
+background-color: rgb(32, 139, 104);
+}
+    .custom-checkbox {
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+.checkbox-input:checked ~ .checkbox-icon {
+background-color: #2196F3;
+border-color: #2196F3;
+}
+
+.checkbox-label {
+font-size: 16px;
+font-weight: bold;
+}

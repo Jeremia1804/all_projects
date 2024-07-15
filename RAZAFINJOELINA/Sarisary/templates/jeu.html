@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Jeu de tsy haiko</title>
+	<link href="{{ url_for('static',filename = 'img/icone.png')}}" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/jeu.css')}}">
+</head>
+<div>
+	<input type="number" id="larg" name="largeur" placeholder="largeur">
+	<input type="number" id="long" name="longueur" placeholder="longueur">	
+	<input type="button" id="decouper" value="decouper">
+	<br>	
+	<br>	
+	<br>	
+	<br>	
+	<div id="modele">
+		<img id="photo16" src="data:image/jpg;base64,{{photo}}">
+	</div>
+</div>
+
+	<div id="plateau">		
+		<div id="titre"><p>Jeu de Razafinjoelina</p></div>
+		<div id="boutons">
+			<input type="button" id="melanger" value="mélanger">
+			<input type="button" id="rotateplus" value="Rotation 90">
+			<input type="button" id="rotatemoins" value="Rotation -90">
+		</div>
+		<div id="jeu">
+			<div id="ligne0" class="ligne">
+				<div class="img_puzzle"><img id="photo1" src="data:image/jpg;base64,{{photo}}"/></div>
+		    </div>
+		</div>
+		
+		<div id="message">0 coup(s)</div>
+	</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Main.js')}}"></script>
+</html>

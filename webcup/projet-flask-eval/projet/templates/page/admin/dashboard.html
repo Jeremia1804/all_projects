@@ -1,0 +1,108 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+<link href="/static/public/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
+<link href="/static/public/vendor/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css"/>
+{% endblock%}
+
+{% block body %}
+<div class="content-body">
+    <!-- row -->
+                <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card overflow-hidden">
+                            <div class="card-header border-0 pb-0">
+                                <div>
+                                    <p class="mb-2 font-w100">Montant total des devis</p>
+                                    <h3 class="mb-0 fs-24 font-w600">{{board.total}} MGA</h3>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">	
+                                <div class="col-7 px-0 offset-5 mt-widget">	
+                                    <canvas id="chart_widget_2" height="85"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card overflow-hidden">
+                            <div class="card-header border-0 pb-0">
+                                <div>
+                                    <p class="mb-2 font-w100">Total montants payes</p>
+                                    <h3 class="mb-0 fs-24 font-w600">{{board.paye}} MGA</h3>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">	
+                                <div class="col-7 px-0 offset-5 mt-widget">	
+                                    <canvas id="chart_widget_3" height="85"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card overflow-hidden bg-image bg-danger" >
+                            <div class="card-header  border-0">
+                                <div>
+                                    <p class="mb-2 font-w100 text-white">Montant a payes</p>
+                                    <h3 class="mb-0 fs-24 font-w600">{{board.reste}} MGA</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-xxl-12">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-header align-items-start pb-0 border-0">	
+                                    <div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="javascript:;" class="dropdown-toggle fs-12" data-toggle="dropdown" aria-expanded="false">
+                                            Annees
+                                        </a>
+                                        <div class="dropdown-menu" style="">
+                                            <a class="dropdown-item" href="javascript:void(0);">Daily</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Weekly</a>
+                                            <a class="dropdown-item" href="javascript:void(0);">Monthly</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <canvas id="barChart_1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Montant des devis par annee</h4>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="barChart_2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="/static/public/vendor/chart.js/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="/static/public/js/plugins-init/chartjs-init.js" type="text/javascript"></script>
+<script src="/static/public/vendor/owl-carousel/owl.carousel.js" type="text/javascript"></script>
+<script src="/static/public/vendor/apexchart/apexchart.js" type="text/javascript"></script>
+<script src="/static/public/js/dashboard/page-event.js" type="text/javascript"></script>
+{% endblock%}

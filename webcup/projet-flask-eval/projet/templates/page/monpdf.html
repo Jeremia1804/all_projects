@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devis</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    #container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    #entete {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    #entete h3 {
+        margin: 0;
+    }
+    #logo {
+        width: 100px;
+        height: auto;
+    }
+    #table {
+        margin-bottom: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    #total {
+        float: right;
+    }
+    h2 {
+        margin: 0;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="entete">
+            <div>
+                <h3>Maison: {{devis.maison}} - Finition: {{devis.finition}}</h3>
+            </div>
+        </div>
+        <h4>Liste des travaux</h4>
+        <div id="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Designation</th>
+                        <th>Quantite</th>
+                        <th>Unite</th>
+                        <th>Prix unitaire</th>
+                        <th>Valeur</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for dat in travaux %}
+                    <tr>
+                        <td>{{dat.libelle}}</td>
+                        <td>{{dat.quantite}}</td>
+                        <td>{{dat.unite}}</td>
+                        <td>{{dat.pu}}</td>
+                        <td>{{dat.code}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div id="total">
+                <h2>Total: {{total}}</h2>
+            </div>
+            <h4>Liste des paiements</h4>
+        <div id="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reference</th>
+                        <th>montant</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pa in paiement %}
+                    <tr>
+                        <td>{{pa.reference}}</td>
+                        <td>{{pa.montant}}</td>
+                        <td>{{pa.dateheure}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div id="total">
+                <h2>Total: {{total_p}}</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

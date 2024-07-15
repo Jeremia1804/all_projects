@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Sardinas-Patterson</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Projet Sardinas-Patterson</h1>
+        <form id="codeForm">
+            <label for="codeInput">Entrer la séquence de code:</label>
+            <input type="text" id="codeInput" name="codeInput" placeholder="Ex: 01,1,001,0100,100" required>
+            <button type="submit">Valider</button>
+        </form>
+        <div id="results">
+            <h2>Résultats</h2>
+            <p id="resultSardinas">Réponse de Sardinas: <span></span></p>
+            <p id="resultOther">Reponse du modele: <span></span></p>
+            <p><button id="learn">Apprendre</button></p>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

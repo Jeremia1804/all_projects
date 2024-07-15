@@ -1,0 +1,147 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+<link href="/static/public/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+{% endblock%}
+
+{% block body %}
+
+<div class="content-body">
+    <!-- row -->
+    
+    <div class="container-fluid">
+        <!-- row -->
+
+
+        <div class="row">
+            <div class="col-xl-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Vos colonnes</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form>
+                                <div class="form-group choix">
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="maison" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">Maison</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="finition" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">Finition</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="total" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">Montant total</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="paye-p" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">Pourcentage paye</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="debut" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">debut</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="fin" id="check1" value="" checked="">
+                                        <label class="form-check-label" for="check1">Fin travaux</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <h4 class="card-title">Trier par</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form>
+                                <div class="form-group mb-0 tri">
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="maison"> Maison</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="finition"> Finition</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="total"> Montant total</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="paye-p"> Pourcentage paye</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="debut"> Debut</label>
+                                    </div>
+                                    <div class="radio">
+                                        <label><input type="radio" name="optradio" id="fin"> Fin travaux</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Liste des Devis</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table header-border table-responsive-sm mypagination" url={{url}} nb={{nb}}>
+                                <thead>
+                                    <tr>
+                                        <th name="maison">Maison</th>
+                                        <th name="finition">Finition</th>
+                                        <th name="total">Montant total</th>
+                                        <th name="paye-p">Pourcentage paye</th>
+                                        <th name="color">Color</th>
+                                        <th name="fin">Fin travaux</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for d in devis%}
+                                    <tr style="background-color: {{d.getColor()}};">
+                                        <td name="maison">{{d.maison}}</td>
+                                        <td name="finition">{{d.finition}}</td>
+                                        <td name="total">{{d.total}}</td>
+                                        <td name="paye-p"></td>
+                                        <td name=""></td>
+                                        <td name="fin">Test</td>
+                                        <td name="iddevis" value="iddevis">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-success light sharp" data-toggle="dropdown" aria-expanded="false">
+                                                    <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg>
+                                                </button>
+                                                <div class="dropdown-menu" style="">
+                                                    <a class="dropdown-item" href="/detail-devis/{iddevis}">Detail</a>
+                                                    <a class="dropdown-item" href="#">Exporter pdf</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <div class="card-body" style="float: right;">
+                                <div class="btn-group mr-2 mb-2">
+                                    <button type="button" class="btn btn-outline-primary previous">previous</button>
+                                    <button type="button" class="btn btn-primary go">go</button>
+                                    <button type="button" class="btn btn-outline-primary next">next</button>
+                                </div>
+                                <div class="btn-group mb-2">
+                                    <input type="number" class="form-control goinput" style="width: 20%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+{% endblock%}

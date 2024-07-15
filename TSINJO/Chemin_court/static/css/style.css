@@ -1,0 +1,27 @@
+#graphe{
+    width: 900px;
+    height:900px;
+    float:left;
+}
+
+#fonctionnalite{
+    height:900px;
+}
+
+#cut>select{
+    width: 200px;
+    height:40px;
+    border: none;
+    background-color: transparent;
+}
+
+#search>select{
+    width: 200px;
+    height:40px;
+    border: none;
+    background-color: transparent;
+}
+
+#cut, #search{
+    height:60px;
+}

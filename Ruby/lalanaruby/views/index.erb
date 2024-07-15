@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tableau élégant avec HTML et CSS</title>
+	<link rel="stylesheet" href="/css/mycss.css">
+</head>
+<body>
+	<form action='/checker' method='get'>
+	<div class="checkbox-group">
+		<%=@check%>
+	</div>
+	<input type='submit' value='valider'>
+	</form>
+	<%=@table %>
+</body>
+</html>

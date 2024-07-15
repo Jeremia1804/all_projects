@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome-5/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <H1 style="color: white; text-align: center; margin-top: 3%;margin-bottom: 2%;">Morpion</H1>
+    <div class="board__settings"><i class="fa fa-cog board__settings-cog"></i>
+        <h1 class="board__header-settings">
+          <div class="board__row">
+            <div class="fa fa-times board__settings__choice-cross">
+              
+            </div>
+            <div class="fa fa-dot-circle board__settings__choice-nought">
+
+            </div>
+          </div>
+        </h1>
+      </div>
+      <div class="board__difficulty"><i class="fa fa-cog board__settings-cog"></i>
+        <h1 class="board__header-difficulty">Niveau</h1>
+        <div class="board__difficulty__button-easy" id="easy">Facile</div>
+        <div class="board__difficulty__button-medium" id="medium">Moyen</div>
+        <div class="board__difficulty__button-hard" id="hard">Difficile</div>
+      </div>
+      <div class="board">
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="0"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="1"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="2"></label>
+        </div>
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="3"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="4"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="5"></label>
+        </div>
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="6"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="7"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="8"></label>
+        </div>
+      </div>
+      <script src="./index.js"></script>
+</body>
+</html>

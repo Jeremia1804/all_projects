@@ -1,0 +1,71 @@
+{%include 'header.html'%}
+                            <div class="email-right-box ms-0 ms-sm-4 ms-sm-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="right-box-padding">
+                                            <div class="toolbar mb-4" role="toolbar">
+                                                {% if mail.compteDestinataire == compte %}
+                                                <div class="btn-group mb-1">
+                                                    {% if mail.spam == "no" %}
+                                                   <a href="{{url_for('spamite',idmail=mail.idMail,valeur='yes')}}"><button type="button" class="btn btn-primary light px-3"><i class="fa fa-exclamation-triangle"></i> &nbsp; Signaler spam</button></a>
+                                                   {% else %}
+                                                   <a href="{{url_for('spamite',idmail=mail.idMail,valeur='no')}}"><button type="button" class="btn btn-primary light px-3">&nbsp; Signaler non spam</button></a>
+                                                   {% endif %}
+                                                    
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                            <div class="read-content">
+                                                <div class="media pt-3 d-sm-flex d-block justify-content-between">
+                                                    <div class="clearfix mb-3 d-flex">
+                                                        <!-- <img class="me-3 rounded" width="70" height="70" alt="image" src="static/images/avatar/1.jpg"> -->
+                                                        <div class="media-body me-2">
+                                                            <h5 class="text-primary mb-0 mt-1">{{mail.nomDestinateur}}</h5> <h6>{{mail.compteDestinateur}}</h6>
+                                                            <p class="mb-0">{{mail.getDate()}}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix mb-3">
+                                                        <a href="javascript:void()" class="btn btn-primary px-3 my-1 light me-2"><i class="fa fa-reply"></i> </a>
+                                                        <a href="javascript:void()" class="btn btn-primary px-3 my-1 light me-2"><i class="fas fa-arrow-right"></i> </a>
+                                                        <a href="javascript:void()" class="btn btn-primary px-3 my-1 light me-2"><i class="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="media mb-2 mt-3">
+                                                    <div class="media-body"><span class="pull-end"></span>
+                                                        {% if mail.compteDestinataire == compte %}
+                                                        <p class="read-content-email">
+                                                            To: Me</p>
+                                                        {% else %}
+                                                        <p class="read-content-email">
+                                                            To: {{mail.compteDestinataire}}</p>
+                                                        {% endif %}
+                                                        <h5 class="my-1 text-primary">{{mail.objet}}</h5>
+                                                    </div>
+                                                </div>
+                                                <div class="read-content-body">
+                                                    <p class="mb-2 text-display">{{mail.texte}}</p>
+                                                </div>
+                                                <hr>
+                                                <div class="compose-content">
+                                                    <form action="{{url_for('repondre')}}" method="post">
+                                                        <div class="mb-3" style="font-weight: bold; font-size: 120%;">
+                                                            Repondre
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <input type="hidden" name="idmail" value="{{mail.idMail}}">
+                                                            <textarea id="email-compose-editor" name="texte" class="textarea_editor form-control bg-transparent" rows="15" placeholder="Reponse ..."></textarea>
+                                                        </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <button class="btn btn-primary " type="submit">Send</button>
+                                            </div>
+                                        </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script src="{{ url_for('static',filename= 'js/monjs.js')}}"></script>
+                {%include 'footer.html'%}

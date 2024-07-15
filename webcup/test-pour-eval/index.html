@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="chartJSContainer" width="600" height="400"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"></script>
+    <div>
+        <button onclick="download()">Telecharger</button>
+    </div>
+</body>
+<script>
+    var options = {
+  type: 'line',
+  data: {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+    datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderColor: 'pink'
+      },
+      {
+        label: '# of Points',
+        data: [7, 11, 5, 8, 3, 7],
+        borderColor: 'orange'
+      }
+    ]
+  },
+  options: {
+    plugins: {
+      customCanvasBackgroundColor: {
+        color: 'pink'
+      }
+    }
+  },
+  plugins: [{
+    id: 'customCanvasBackgroundColor',
+    beforeDraw: (chart, args, options) => {
+      const {
+        ctx
+      } = chart;
+      ctx.save();
+      ctx.globalCompositeOperation = 'destination-over';
+      ctx.fillStyle = options.color || '#99ffff';
+      ctx.fillRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    }
+  }]
+}
+
+var ctx = document.getElementById('chartJSContainer').getContext('2d');
+new Chart(ctx, options);
+
+function download(){
+    const imageLink = document.createElement('a');
+    const canv = document.getElementById("chartJSContainer");
+    imageLink.download = 'mybelleliantsoa.png';
+    imageLink.href = canv.toDataURL('image/png',1);
+    console.log(imageLink)
+    imageLink.click()
+}
+</script>
+</html>

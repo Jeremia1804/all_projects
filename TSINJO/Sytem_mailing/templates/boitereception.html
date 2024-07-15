@@ -1,0 +1,59 @@
+{% include 'header.html' %}
+                            <div class="email-right-box ms-0 ms-sm-4 ms-sm-0">
+                                <div role="toolbar" class="toolbar ms-1 ms-sm-0">
+                                    <div class="btn-group mb-1">
+                                        <div class="form-check custom-checkbox">
+                                            <input type="checkbox" class="form-check-input" id="checkAll">
+                                            <label class="form-check-label" for="checkAll"></label>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group mb-1">
+                                        <button class="btn btn-primary light px-3" type="button"><i class="ti-reload"></i>
+                                        </button>
+                                    </div>
+                                    <div class="btn-group mb-1">
+                                        <button aria-expanded="false" data-bs-toggle="dropdown" class="btn btn-primary px-3 light dropdown-toggle" type="button">More <span
+                                                class="caret"></span>
+                                        </button>
+                                        <div class="dropdown-menu"> <a href="javascript: void(0);" class="dropdown-item">Mark as Unread</a> <a href="javascript: void(0);" class="dropdown-item">Add to Tasks</a>
+                                            <a href="javascript: void(0);" class="dropdown-item">Add Star</a> <a href="javascript: void(0);" class="dropdown-item">Mute</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="email-list mt-3">
+                                    {% for b in boite %}
+                                    
+                                    <div class="message">
+                                        <div>
+                                            <div class="d-flex message-single">
+                                                <div class="ps-1 align-self-center">
+                                                    <div class="form-check custom-checkbox">
+                                                        <input type="checkbox" class="form-check-input" id="checkbox2">
+                                                        <label class="form-check-label" for="checkbox2"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <button class="border-0 bg-transparent align-middle p-0"></button>
+                                                </div>
+                                            </div>
+                                            {% if b.etat == 0%}
+                                            <a style="font-weight: bold" href="{{url_for('lire', idmail=b.idMail)}}" class="col-mail col-mail-2">
+                                                <div class="subject">{{b.nomDestinateur}}: {{b.texte}}</div>
+                                                <div class="date">Non lu &nbsp;&nbsp;&nbsp; {{b.getDate()}}</div>
+                                            </a>
+                                            {% else %}
+                                            <a href="{{url_for('lire', idmail=b.idMail)}}" class="col-mail col-mail-2">
+                                                <div class="subject">{{b.nomDestinateur}}: {{b.texte}}</div>
+                                                <div class="date">Lu &nbsp;&nbsp;&nbsp; {{b.getDate()}}</div>
+                                            </a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <!-- panel -->
+                                <div class="row mt-4">
+                                </div>
+                            </div>
+
+{% include 'footer.html' %}

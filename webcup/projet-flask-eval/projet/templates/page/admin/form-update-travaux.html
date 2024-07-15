@@ -1,0 +1,54 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+{% endblock%}
+
+{% block body %}
+<div class="content-body">
+    <!-- row -->
+    
+    <div class="container-fluid">
+        <!-- row -->
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Update ce travail</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form action="/travaux/update" method="post">
+                                <input type="hidden" name="idtravaux" value="{{travaux.idtravaux}}">
+                                <div class="form-group">
+                                    <label>Libelle: </label>
+                                    <input type="text" class="form-control input-default" name="libelle" value="{{travaux.libelle}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Prix Unitaire: </label>
+                                    <input type="text" class="form-control input-default" name="pu" value="{{travaux.pu}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Unite: </label>
+                                    <input type="text" class="form-control input-default" name="unite" value="{{travaux.unite}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Code: </label>
+                                    <input type="text" class="form-control input-default" name="code" value="{{travaux.code}}">
+                                </div>
+                                <div class="form-group">
+                                    <div class="card-body">
+                                        <label> </label>
+                                        <input type="submit" class="form-control input-default "  value="Valider">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock%}

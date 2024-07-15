@@ -1,0 +1,113 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+{% endblock%}
+
+{% block body %}
+<div class="content-body">
+    <!-- row -->
+    
+    <div class="container-fluid">
+        <div class="page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Form</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Element</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-xl-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Upload les travaux</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form custom_file_input">
+                            <form action="/importer-travaux" enctype="multipart/form-data" method="post">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"></span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="travaux">
+                                        <label class="custom-file-label">Fichier de travaux</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"></span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="devis">
+                                        <label class="custom-file-label">Fichier de devis</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <button type="submit" class="btn btn-primary mb-2">Importer</button>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Importer les payments</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form custom_file_input">
+                            <form action="/importer-paiement" enctype="multipart/form-data" method="post">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"></span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="paiement">
+                                        <label class="custom-file-label">Fichier de paiement</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    </div>
+                                    <div class="custom-file">
+                                    </div>
+                                </div>
+
+
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                    </div>
+                                    
+                                </div>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <button type="submit" class="btn btn-primary mb-2">Importer</button>
+                                    </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock%}

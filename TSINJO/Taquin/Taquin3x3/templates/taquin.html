@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>taquin JavaScript</title>
+	<link href="{{ url_for('static',filename = 'img/icone.png')}}" rel="icon" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/styles_taquin.css')}}">
+</head>
+<body>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Grille.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Case.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Taquin.js')}}"></script>
+	<div id="plateau">
+		<div id="titre"><span>Veuiller patienter</span></div>
+		<div id="boutons">
+			<select id="themes">
+				<!-- <option value="nombres">Nombres</option> -->
+				<option value="famille">Mr_Tsinjo</option>
+				<option selected value="avatar">Son_avatar</option>
+				
+			</select>
+			<input type="button" id="melanger" value="mélanger">
+			<!-- <input type="button" id="solution" value="solution"> -->
+			<input type="button" id="resoudre" value="resoudre">
+		</div>
+		<div id="jeu">
+			<div id="ligne0" class="ligne">
+				<!-- J'ai supprimé les images parce qu'il arrivait que l'on puisse voir les images "nombres" un très bref instant -->
+				<img id="photo1" class="img_puzzle" src=''>
+				<img id="photo2" class="img_puzzle" src=''>
+				<img id="photo3" class="img_puzzle" src=''>
+			</div>
+			<div id="ligne1" class="ligne">
+				<img id="photo4" class="img_puzzle" src=''>
+				<img id="photo5" class="img_puzzle" src=''>
+				<img id="photo6" class="img_puzzle" src=''>
+			</div>
+			<div id="ligne2" class="ligne">
+				<img id="photo7" class="img_puzzle" src=''>
+				<img id="photo8" class="img_puzzle" src=''>
+				<img id="photo0" class="img_puzzle" src=''>
+			</div>
+
+		</div>
+		<div id="modele">
+			<img id="photo16" src=''>
+		</div>	
+		<div id="message">0 coup(s), 0 bien placé(s)</div>
+		<div id="footer"><p>Bonne Chance</p></div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Main.js')}}"></script>
+</html>

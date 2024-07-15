@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/first.css')}}">
+  <title>Jeu hafa</title>
+</head>
+<body>
+
+  <div class="container">
+    <form method="get" action="/jouer">
+      <!-- <label for="image-input" id="upload-btn">Sélectionnez une image</label> -->
+      <!-- <input type="file" name="image" id="image-input" accept="image/*">
+      <div id="image-container">
+        <img id="preview-image" src="" alt="Aperçu de l'image">
+      </div> -->
+      <select id="themes" name="photo">
+        <option value="ciel">Ciel</option>
+        <option value="rose">Une rose</option>
+        <option value="einstein">Albert Einstein</option>
+    </select>
+      <button type="submit" id="validate-btn">Valider</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('image-input').addEventListener('change', function() {
+      validateImage();
+    });
+
+    function validateImage() {
+      const input = document.getElementById('image-input');
+      const previewImage = document.getElementById('preview-image');
+
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          previewImage.src = e.target.result;
+        };
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+  </script>
+
+</body>
+</html>

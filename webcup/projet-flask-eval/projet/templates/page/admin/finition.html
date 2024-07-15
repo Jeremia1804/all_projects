@@ -1,0 +1,63 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+<link href="/static/public/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet" type="text/css"/>
+<link href="/static/public/vendor/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css"/>
+{% endblock%}
+
+{% block body %}
+<div class="content-body">
+    <!-- row -->
+                <!-- row -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-xxl-12">
+                <div class="row">
+                    <div class="card-header">
+                        <h4 class="card-title">Liste des finitions</h4>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table header-border table-responsive-sm"  >
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Designation</th>
+                                    <th>Augmentation (en %)</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for fin in finitions %}
+                                <tr>
+                                    <td>{{fin.idfinition}}</td>
+                                    <td>{{fin.libelle}}</td>
+                                    <td>{{fin.augmentation}}</td>
+                                    <td>
+                                        <div class="dropdown">
+                                            <button type="button" class="btn btn-success light sharp" data-toggle="dropdown" aria-expanded="false">
+                                                <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"></rect><circle fill="#000000" cx="5" cy="12" r="2"></circle><circle fill="#000000" cx="12" cy="12" r="2"></circle><circle fill="#000000" cx="19" cy="12" r="2"></circle></g></svg>
+                                            </button>
+                                            <div class="dropdown-menu" style="">
+                                                <a class="dropdown-item" href="/form-update-finition/{{fin.idfinition}}">Update something</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="/static/public/vendor/chart.js/Chart.bundle.min.js" type="text/javascript"></script>
+<script src="/static/public/vendor/owl-carousel/owl.carousel.js" type="text/javascript"></script>
+<script src="/static/public/vendor/apexchart/apexchart.js" type="text/javascript"></script>
+<script src="/static/public/js/dashboard/page-event.js" type="text/javascript"></script>
+{% endblock%}

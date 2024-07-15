@@ -1,0 +1,46 @@
+{% extends 'base/index.html'%}
+
+{% block css %}
+{% endblock%}
+
+{% block body %}
+<div class="content-body">
+    <!-- row -->
+    
+    <div class="container-fluid">
+        <!-- row -->
+            <div class="col-xl-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Update cette finition</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="basic-form">
+                            <form action="/finition/update" method="post">
+                                <input type="hidden" name="idfinition" value="{{finition.idfinition}}">
+                                <div class="form-group">
+                                    <label>Libelle: </label>
+                                    <input type="text" class="form-control input-default" name="libelle" value="{{finition.libelle}}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Augmentation: </label>
+                                    <input type="text" class="form-control input-default" name="augmentation" value="{{finition.augmentation}}">
+                                </div>
+                                <div class="form-group">
+                                    <div class="card-body">
+                                        <label> </label>
+                                        <input type="submit" class="form-control input-default "  value="Valider">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+</div>
+{% endblock %}
+
+{% block js %}
+{% endblock%}

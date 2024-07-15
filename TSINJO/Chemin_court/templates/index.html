@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/style.css')}}">
+    <script type="text/javascript" src="{{ url_for('static',filename = 'js/Executer.js')}}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="graphe"><img id = "myImage" src="{{ url_for('static',filename = 'img/toi.png')}}" alt="" ></div>
+    <div id="fonctionnalite">
+        <div id ="cut">
+            <select name="ip1" id="select1">
+                {%
+                for ip in ips%}
+                <option value="{{ip.id}}">{{ip.valeur}}</option>
+                {%
+
+                    endfor%}
+            </select> 
+            <select name="ip2" id="select2">
+                {%
+                    for ip in ips%}
+                    <option value="{{ip.id}}">{{ip.valeur}}</option>
+                    {%
+
+                        endfor%}
+            </select>
+            <input type="button" value="couper" id="couper">
+        </div>
+        <div id="search">
+            <select name="ip" id="select3">
+                {%
+                    for ip in ips%}
+                    <option value="{{ip.id}}">{{ip.valeur}}</option>
+                    {%
+
+                        endfor
+                        %}
+            </select> 
+            <select name="site" id="select4">
+                {%
+                    for site in sites%}
+                    <option value="{{site.id}}">{{site.nom}}</option>
+                    {%  
+                        endfor%}
+            </select>
+            <input type="button" value="trouver" id="trouver">
+        </div>
+        <div id="info">
+            {%for ip in ips%}
+            <h3>{{ip.valeur}}</h3>
+                {%for site in ip.site%}
+                <p>- {{site.nom}}</p>
+                {%endfor%}
+                {%endfor%}
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{{ url_for('static',filename = 'js/Main.js')}}"></script>
+</html>

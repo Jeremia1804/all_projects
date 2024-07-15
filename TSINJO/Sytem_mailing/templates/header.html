@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from lezato.dexignzone.com/xhtml/email-compose.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Apr 2023 22:39:26 GMT -->
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<meta name="description" content="Lezato : Restaurant Admin Template" />
+	<meta property="og:title" content="Lezato : Restaurant Admin Template" />
+	<meta property="og:description" content="Lezato : Restaurant Admin Template" />
+	<meta property="og:image" content="social-image.png" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- PAGE TITLE HERE -->
+	<title>Nouveau message</title>
+	
+	<!-- FAVICONS ICON -->
+	<link rel="shortcut icon" type="image/png" href="{{ url_for('static',filename= 'images/favicon.png')}}" />
+	<link href="{{ url_for('static',filename= 'vendor/jquery-nice-select/css/nice-select.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename= 'vendor/dropzone/dist/dropzone.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static',filename= 'css/style.css')}}" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="content-body">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="email-left-box px-0 mb-3">
+                                <div class="p-0">
+                                    <a href="{{url_for('actualiser')}}" class="btn btn-primary btn-block">Actualiser Spam</a>
+                                </div>
+                                <p></p>
+                                <p></p>
+                                <div class="p-0">
+                                    <a href="{{url_for('logout')}}" class="btn btn-primary btn-block">se deconnecter de Gmail</a>
+                                </div>
+                                <div class="mail-list rounded mt-4">
+                                    <a href="{{url_for('newmessage')}}" class="list-group-item active"><i
+                                            class="fas fa-pencil-alt font-18 align-middle me-2"></i> Nouveau message <span
+                                            class="badge badge-primary badge-sm float-end"></span>
+                                    </a>
+                                    <a href="{{url_for('envoye')}}" class="list-group-item"><i
+                                            class="fa fa-paper-plane font-18 align-middle me-2"></i>Envoyes
+                                    </a>
+                                    <a href="{{url_for('boitereception')}}" class="list-group-item"><i
+                                            class="fas fa-envelope font-18 align-middle me-2"></i>Boite de reception<span
+                                            class="badge badge-danger text-white badge-sm float-end">47</span>
+                                    </a>
+                                    <a href="{{url_for('spam')}}" class="list-group-item"><i
+                                            class="fas fa-exclamation-triangle font-18 align-middle me-2"></i>Spam</a>
+                                    <a href="javascript:void()" class="list-group-item"><i
+                                            class="fa fa-trash font-18 align-middle me-2"></i>Trash</a>
+                                </div>
+                            </div>
