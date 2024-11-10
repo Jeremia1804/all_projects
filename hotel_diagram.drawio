@@ -83,7 +83,7 @@
           <mxGeometry y="168" width="240" height="26" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-8" value="hotel_room_type&lt;div&gt;inherit = { category_id : product.category }&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=60;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="870" y="120" width="250" height="112" as="geometry" />
+          <mxGeometry x="880" y="140" width="250" height="112" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-10" value="category_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-8">
           <mxGeometry y="60" width="250" height="26" as="geometry" />
@@ -125,7 +125,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-32" value="hotel_amenities_type&lt;div&gt;inherit = { category_id : product.category }&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=46;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="870" y="249" width="250" height="72" as="geometry" />
+          <mxGeometry x="880" y="300" width="250" height="72" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-33" value="category_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-32">
           <mxGeometry y="46" width="250" height="26" as="geometry" />
@@ -178,7 +178,7 @@
           <mxGeometry y="52" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-53" value="hotel_folio_line&lt;div&gt;inherit = {order_id : sale.order_line}&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="770" y="467" width="220" height="118" as="geometry" />
+          <mxGeometry x="800" y="440" width="220" height="170" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-54" value="folio_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
           <mxGeometry y="40" width="220" height="26" as="geometry" />
@@ -186,7 +186,25 @@
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-55" value="room_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
           <mxGeometry y="66" width="220" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-56" value="product_id : room_id.product_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-58" value="product_id : room_id.product_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
+          <mxGeometry y="92" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-56" value="checkin_date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
+          <mxGeometry y="118" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-59" value="checkout_date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-53">
+          <mxGeometry y="144" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-60" value="hotel_service_line&lt;div&gt;inherit = {order_id : sale.order_line}&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="320" width="220" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-61" value="folio_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-60">
+          <mxGeometry y="40" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-62" value="service_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-60">
+          <mxGeometry y="66" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-63" value="product_id : service_id.product_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-60">
           <mxGeometry y="92" width="220" height="26" as="geometry" />
         </mxCell>
       </root>
