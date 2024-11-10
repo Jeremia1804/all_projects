@@ -55,7 +55,7 @@
         <mxCell id="vTVSx52YXHkKpOMaiZz1-8" value="..." style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="vTVSx52YXHkKpOMaiZz1-3" vertex="1">
           <mxGeometry y="130" width="168" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="vTVSx52YXHkKpOMaiZz1-9" value="hotel_room&#xa;inherit = { product_id : product.product }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="vTVSx52YXHkKpOMaiZz1-9" value="hotel_room&#xa;inherit = { product.product : product_id }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="60" y="290" width="240" height="196" as="geometry">
             <mxRectangle x="220" y="120" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -78,7 +78,7 @@
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-39" value="amenities_ids" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="vTVSx52YXHkKpOMaiZz1-9">
           <mxGeometry y="168" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-8" value="hotel_room_type&lt;div&gt;inherit = { category_id : product.category }&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=60;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-8" value="hotel_room_type&lt;div&gt;inherit = { product.category : category_id }&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=60;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="55" y="540" width="250" height="112" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-10" value="category_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-8">
@@ -87,7 +87,7 @@
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-11" value="description" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-8">
           <mxGeometry y="86" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-12" value="hotel_services&#xa;inherit = { product_id : product.product }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-12" value="hotel_services&#xa;inherit = { product.product : product_id }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="390" y="300" width="240" height="118" as="geometry">
             <mxRectangle x="220" y="120" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
@@ -101,19 +101,19 @@
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-24" value="categ_id : service_type_id.category_id" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-12">
           <mxGeometry y="92" width="240" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-17" value="hotel_service_type&lt;div&gt;inherit = { category_id : product.category }&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=46;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-17" value="hotel_service_type&lt;div&gt;inherit =&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;{ product.category : category_id }&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=46;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="369" y="540" width="250" height="72" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-18" value="category_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-17">
           <mxGeometry y="46" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-32" value="hotel_amenities_type&lt;div&gt;inherit = { category_id : product.category }&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=46;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-32" value="hotel_amenities_type&lt;div&gt;inherit =&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;{ product.category : category_id }&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=46;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="700" y="540" width="250" height="72" as="geometry" />
         </mxCell>
         <mxCell id="EA4_dGLOAJ5GfH2h5GB5-33" value="category_id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="EA4_dGLOAJ5GfH2h5GB5-32">
           <mxGeometry y="46" width="250" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-34" value="hotel_amenities&#xa;inherit = { product_id : product.product }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="EA4_dGLOAJ5GfH2h5GB5-34" value="hotel_amenities&#xa;inherit = { product.product : product_id }" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="690" y="300" width="240" height="118" as="geometry">
             <mxRectangle x="220" y="120" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
